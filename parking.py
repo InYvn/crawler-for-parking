@@ -102,6 +102,8 @@ def stopcar():
     # 等待6秒，确保页面加载完成
     driver.quit()
 
+stopcar()
+print(f"首次启动，已执行一次停车检查。")
 
 while True:
     now = datetime.now()
