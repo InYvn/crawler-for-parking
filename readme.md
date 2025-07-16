@@ -17,11 +17,29 @@ webdriver-manager>=3.8.0
 
 ## 使用说明
 
-修改目标网址
+### 1. 修改监控网址
+
+请在 `parking.py` 文件中找到如下代码，并将目标网址替换为你需要监控的实际地址：
+
 ```python
-# 修改main.py第26行
 driver.get('https://your-target-url.com/parking')  # 替换为实际监控地址
 ```
+
+### 2\. 配置 ChromeDriver
+
+- 推荐将 `chromedriver` 放在项目根目录，或使用 `webdriver-manager` 自动下载和管理驱动。
+- 也可前往 [Chrome for Testing](https://googlechromelabs.github.io/chrome-for-testing/) 下载与你浏览器版本对应的 `chromedriver`。
+
+### 3\. 确认 Chrome 浏览器版本
+
+确保 `chromedriver` 版本与本地 Chrome 浏览器主版本号一致，否则可能无法正常运行。
+
+**查看本地 Chrome 版本方法：**
+1. 打开 Chrome 浏览器
+2. 在地址栏输入 `chrome://settings/help` 或 `chrome://version/`
+3. 记下主版本号（如 `114.0.5735.90`，主版本号为 `114`）
+
+如有版本不匹配，请下载对应版本的 `chromedriver`。
 
 ## 注意事项
 
